@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="">
+
+</head>
+<body>
+    
+    <style>
+        .modal--show {
+            display: block;
+        }
+        .modal {
+            width: 450px;
+            height:auto;
+
+        } 
+        .modal2 {
+            width: 300px;
+            margin-left: 30%;
+        }
+        p {
+            width: 200px;
+            
+        }
+        span {
+            color: red;
+        }
+        </style>
+    
+        <form action="" style="width: 50vh;">
+            <h3>Form input</h3>
+            <p>
+                Fullname: <input type="text" id="fullNameInput">
+                <span id="fullNameError"></span>
+            </p>
+            <p>
+                Age: <input type="text"  id="ageInput">
+                <span id="ageError"></span>
+            </p>
+            <p>
+                Email: <input type="text" id="emailInput">
+                <span id="emailError"></span>
+            </p>
+            <p>
+                Gender: <select name="" id="genderInput"> 
+                    <option name="genderOptions" default value="Male">Male</option>
+                    <option name="genderOptions" value="Female">Female</option>
+                    <option name="genderOptions" value="0thers">Others</option>
+                </select>
+            </p>
+            <p>
+                Height(meter): <input type="text" id="heightInput">
+                <span id="heightError"></span>
+            </p>
+            <p>
+                weight(kg): <input type="text" id="weightInput">
+                <span id="weightError"></span>
+            </p>
+            <p>
+                Address: <input type="text" id="addressInput">
+                <span id="addressError"></span>
+            </p>
+            
+            <button type="button" onclick="clickAddTableBtn()">Add to table</button>
+    
+        </form>
+        <form action="">
+
+            <div style="margin-left: 5px;">
+            <p>
+                <h3>search</h3>
+                <input type="text" id="searchInput"> 
+                <select name="searchOptions" id="searchOption"> 
+                    <option name="searchOptions" default value="Fullname">fullname</option>
+                    <option name="searchOptions" value="Email">email</option>
+                    <option name="searchOptions" value="BMI">BMI</option>
+                </select>
+                <button type="button" id="" onclick="clickSearchBtn()">search</button>
+            </p>
+        </div>
+           
+        
+        
+
+
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modale-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Do you want to delete this row?</h5>
+                  <button type="button" class="btn btn-primary" id="yesBtn">Yes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="noBtn"  >No</button>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal modal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Form edit User information</h5>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Fullname: <input id="fullnameEdit">
+                  </p>
+                  <p>
+                    Age: <input id="ageEdit">
+                  </p>
+                  <p>
+                    Email: <input id="emailEdit">
+                  </p>
+                  <p>
+                   Gender:
+                   <select name="genderEd" id="genderEdit">
+                       <option name="genderEdit" value="male">male</option>
+                       <option name="genderEdit" value="female">female</option>
+                       <option name="genderEdit" value="others">others</option>
+
+                   </select>
+
+                    <!-- <input id="genderEdit"> -->
+                  </p>
+                  <p>
+                    BMI: <input id="BMIEdit">
+                  </p>
+                  <p>
+                    healthStatus: <input id="healstatusEdit">
+                  </p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="saveBtn">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeBtn" >Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+    
+
+
+
+
+ <script src="./main.js"></script>
+</body>
+</html>
+
+
